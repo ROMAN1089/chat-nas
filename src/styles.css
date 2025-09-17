@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #0a74da;
+    --secondary-color: #0d253f;
+    --background-color: #f0f2f5;
+    --text-color: #333;
+    --white-color: #ffffff;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+    --border-color: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.form-control {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(10, 116, 218, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-control label {
+        font-size: 14px;
+    }
+
+    .form-control input {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 16px;
+    }
+}
